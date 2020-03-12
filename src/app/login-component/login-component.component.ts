@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, EventEmitter, Output } from '@angular/core';
 import { User } from 'src/assets/models/models';
+
 
 @Component({
   selector: 'app-login-component',
@@ -8,13 +9,18 @@ import { User } from 'src/assets/models/models';
 })
 export class LoginComponent implements OnInit {
   public user: User = new User('','');
-  constructor() {}
+
+  @Output() logedSend = new EventEmitter<boolean>();
+
+  constructor(private cdRef: ChangeDetectorRef) {}
   
   ngOnInit(): void {  }
 
-  sendUser(){
+  sendUser(event){
     localStorage.setItem("userName", this.user.username);
     localStorage.setItem("password", this.user.password);
+    this.logedSend.emit(true);
+    //this.cdRef.markForCheck();
   }
 
 }

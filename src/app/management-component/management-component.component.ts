@@ -17,8 +17,8 @@ export class ManagementComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public getWeather(){
-    this._weatherService.getWeather('caracas');
+  public getWeather(country){
+    this._weatherService.getWeather(country);
   }
 
 }

@@ -8,6 +8,6 @@
       <label>Password</label>
       <input autocomplete="off" type="password" name='passsword' #password="ngModel" [(ngModel)]="user.password" >
     </div>
-    <button type="submit" (click)="sendUser()" class="btn btn-light">Accesar</button>
+    <button type="submit" (click)="sendUser($event)" class="btn btn-light">Accesar</button>
   </form>
 </div>

@@ -6,8 +6,12 @@ import { User } from 'src/assets/models/models';
   templateUrl: './menu-link.component.html',
   styleUrls: ['./menu-link.component.css']
 })
+
+
+
 export class MenuLinkComponent implements OnInit {
   public user: User = new User('','');
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -16,8 +20,6 @@ export class MenuLinkComponent implements OnInit {
   }
 
   ngOnChanges(): void {
-    console.log('holaaaaaaaaaaaa');
-    
     this.user.username = localStorage.getItem("userName");
     this.user.password = localStorage.getItem("password");
   }
