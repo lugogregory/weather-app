@@ -1,0 +1,11 @@
+.background-weather {
+    background-image: url('../assets/images/back-weather.jpg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

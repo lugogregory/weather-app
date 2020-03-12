@@ -1,0 +1,20 @@
+.menu-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome-user {
+    margin-right: 15px;
+}
+.welcome-user > p {
+    margin: 0px;
+    color: rgb(230, 225, 225);
+    font-size: 16px;
+    padding: 5px 15px;
+}
+
+.welcome-user > p > span {
+    color: #fff;
+    font-size: 18px;
+    padding-left: 7px;
+}

@@ -1,0 +1,28 @@
+
+
+.content-login {
+    width: 300px;
+    height: 300px;
+    background-color: lightsteelblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: cadetblue;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.section > label {
+    font-weight: 700;
+    font-family: sans-serif;
+    color: #ffff;
+    text-shadow: 2px 2px 2px midnightblue;
+}

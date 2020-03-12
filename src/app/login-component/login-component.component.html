@@ -1,0 +1,13 @@
+<div class="content-login">
+  <form #formUser="ngForm">
+    <div class="section">
+      <label>User</label>
+      <input autocomplete="off" type="text" id='username' name='username' [(ngModel)]="user.username" >
+    </div>
+    <div class="section">
+      <label>Password</label>
+      <input autocomplete="off" type="password" name='passsword' #password="ngModel" [(ngModel)]="user.password" >
+    </div>
+    <button type="submit" (click)="sendUser()" class="btn btn-light">Accesar</button>
+  </form>
+</div>
