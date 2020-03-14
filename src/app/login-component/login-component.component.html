@@ -3,13 +3,13 @@
     <div class="section">
       <label>User</label>
       <input (keyup)="onChange($event)" autocomplete="off" type="text" id='username' name='username'
-        [style.border] = "errorUser.userName && errorMsg ? '2px solid red' : '2px solid #6c757d'"
+        [style.border] = "errorUser.userName && errorMsg ? '1px solid red' : '1px solid #6c757d'"
         [(ngModel)]="user.username">
     </div>
     <div class="section">
       <label>Password</label>
       <input (keyup)="onChange($event)" autocomplete="off" type="password" name='passsword' #password="ngModel"
-        [style.border] = "errorUser.password && errorMsg ? '2px solid red' : '2px solid #6c757d'"
+        [style.border] = "errorUser.password && errorMsg ? '1px solid red' : '1px solid #6c757d'"
         [(ngModel)]="user.password">
     </div>
     <div *ngIf="errorMsg" class="alert alert-danger alert-dismissible small fade show" role="alert">
@@ -18,7 +18,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <button type="submit" (click)="sendUser($event)" class="btn btn-light">Accesar</button>
+    <button type="submit" (click)="sendUser($event)" class="btn btn-light">Acces</button>
   </form>
 
 

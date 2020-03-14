@@ -1,2 +1,40 @@
-<p>management-component works!</p>
-<button (click)="getWeather('caracas')">Get Weather</button>
+<div class="container-fluid content-main-management">
+    <h2>MANAGEMENT SECTION</h2>
+    <div class="section-request-weather">
+        <div class="input-label">
+            <label>Country:</label>
+            <input autocomplete="off" autofocus type="text" id='country' name='country' (keyup)="onChange($event)"
+                [style.border]="errorCountry ? '1px solid red' : '1px solid #6c757d'" [(ngModel)]="country">
+        </div>
+
+        <button type="button" (click)="requestWeather()" class="btn btn-light">Send</button>
+    </div>
+
+    <table *ngIf = "countries.length > 0" class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name Location</th>
+                <th scope="col">Code Country</th>
+                <th scope="col">Temp Min</th>
+                <th scope="col">Temp Max</th>
+                <th scope="col">Pressure</th>
+                <th scope="col">Humidity</th>
+                <th scope="col">Wind Speed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let country of countries">
+                <th scope="row">{{country.id}}</th>
+                <td>{{country.nameLocation}}</td>
+                <td>{{country.codeCountry}}</td>
+                <td>{{country.main.temp_min}}</td>
+                <td>{{country.main.temp_max}}</td>
+                <td>{{country.main.pressure}}</td>
+                <td>{{country.main.humidity}}</td>
+                <td>{{country.wind.speed}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button *ngIf = "countries.length > 0" type="button" class="btn btn-light">Go to card</button>
+</div>

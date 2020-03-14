@@ -1,5 +1,5 @@
 <app-menu-link (logoutState) = "showMenuLink($event)" *ngIf = "showMenu"></app-menu-link>
 <div class="container-fluid background-weather">
-  <router-outlet *ngIf = "showMenu"></router-outlet>
+  <router-outlet class="content-main" *ngIf = "showMenu"></router-outlet>
   <app-login-component *ngIf = "showMenu === false" (logedSend) = "showMenuLink($event)"></app-login-component>
 </div>
