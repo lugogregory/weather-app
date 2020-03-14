@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  EventEmitter, Output } from '@angular/core';
 import { User } from 'src/assets/models/models';
+
 
 @Component({
   selector: 'app-menu-link',
@@ -11,6 +12,8 @@ import { User } from 'src/assets/models/models';
 
 export class MenuLinkComponent implements OnInit {
   public user: User = new User('','');
+
+  @Output() logoutState = new EventEmitter<boolean>();
   
   constructor() { }
 
@@ -22,6 +25,10 @@ export class MenuLinkComponent implements OnInit {
   ngOnChanges(): void {
     this.user.username = localStorage.getItem("userName");
     this.user.password = localStorage.getItem("password");
+  }
+
+  logout() {
+    this.logoutState.emit(false);
   }
 
 }

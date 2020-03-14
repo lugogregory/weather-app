@@ -11,6 +11,7 @@ import { WeatherDetailComponent } from './weather-detail-component/weather-detai
 import { MenuLinkComponent } from './menu-link/menu-link.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    InlineSVGModule
   ],
   providers: [],
   bootstrap: [AppComponent]

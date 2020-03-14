@@ -5,6 +5,8 @@
 
 .welcome-user {
     margin-right: 15px;
+    display: flex;
+    align-items: center;
 }
 .welcome-user > p {
     margin: 0px;
@@ -17,4 +19,11 @@
     color: #fff;
     font-size: 18px;
     padding-left: 7px;
+}
+
+.icon-logout {
+    width: 35px;
+    fill: white;
+    cursor: pointer;
+    margin-left: 10px;
 }

@@ -1,13 +1,25 @@
 <div class="content-login">
-  <form #formUser="ngForm">
+  <form class="form-login" #formUser="ngForm">
     <div class="section">
       <label>User</label>
-      <input autocomplete="off" type="text" id='username' name='username' [(ngModel)]="user.username" >
+      <input (keyup)="onChange($event)" autocomplete="off" type="text" id='username' name='username'
+        [style.border] = "errorUser.userName && errorMsg ? '2px solid red' : '2px solid #6c757d'"
+        [(ngModel)]="user.username">
     </div>
     <div class="section">
       <label>Password</label>
-      <input autocomplete="off" type="password" name='passsword' #password="ngModel" [(ngModel)]="user.password" >
+      <input (keyup)="onChange($event)" autocomplete="off" type="password" name='passsword' #password="ngModel"
+        [style.border] = "errorUser.password && errorMsg ? '2px solid red' : '2px solid #6c757d'"
+        [(ngModel)]="user.password">
+    </div>
+    <div *ngIf="errorMsg" class="alert alert-danger alert-dismissible small fade show" role="alert">
+      <strong>Error: </strong> Es necesario ingresar todos los campos.
+      <button type="button" class="close message-box-button" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
     <button type="submit" (click)="sendUser($event)" class="btn btn-light">Accesar</button>
   </form>
+
+
 </div>
