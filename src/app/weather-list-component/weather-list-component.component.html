@@ -1,1 +1,25 @@
-<p>weather-list-component works!</p>
+<div class="container-fluid content-main-management">
+    <h2>Weather List</h2>
+
+    <div class="content-card">
+        <div *ngFor="let country of countries" class="weather-card-detail">
+            <div class="row title">
+                <p><strong>{{country.nameLocation}}</strong>, {{country.codeCountry}} </p>
+            </div>
+            <div class="row">
+                <img src="../assets/images/weather/Blizzard-2x.png" alt="Card weather country">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Temperature Min: {{country.main.temp_min}} </p>
+                    <p>Temperature Max: {{country.main.temp_max}} </p>
+                </div>
+                <div class="col">
+                    <p>Pressure: {{country.main.pressure}} </p>
+                    <p>Humidity: {{country.main.humidity}} </p>
+                    <p>Wind speed: {{country.wind.speed}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="container-fluid content-main-management">
-    <h2>MANAGEMENT SECTION</h2>
+    <h2>Management Section</h2>
     <div class="section-request-weather">
         <div class="input-label">
             <label>Country:</label>
@@ -21,6 +21,7 @@
                 <th scope="col">Pressure</th>
                 <th scope="col">Humidity</th>
                 <th scope="col">Wind Speed</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -33,8 +34,11 @@
                 <td>{{country.main.pressure}}</td>
                 <td>{{country.main.humidity}}</td>
                 <td>{{country.wind.speed}}</td>
+                <td>
+                    <button type="button" (click)="deleteWeather(country.id)" class="btn btn-danger btn-sm">X</button>
+                </td>
             </tr>
         </tbody>
     </table>
-    <button *ngIf = "countries.length > 0" type="button" class="btn btn-light">Go to card</button>
+    <button *ngIf = "countries.length > 0" (click)="goToList()" type="button" class="btn btn-light">Go to card</button>
 </div>

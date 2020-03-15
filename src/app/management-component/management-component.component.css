@@ -1,4 +1,5 @@
 .container-fluid > h2 {
+    margin-top: 10px;
     color: #ffff;
     text-shadow: 2px 2px 8px black;
 }
